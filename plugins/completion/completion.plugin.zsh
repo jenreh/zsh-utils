@@ -26,6 +26,9 @@ fpath=(~/.zfunc $fpath)
 # fzf-tab shows the list itself and uses the description format for group headers.
 # Set after Zephyr's completion styles, at the end of .zshrc.
 function zsh-utils-fzf-tab-styles {
+  # Find executables that appeared in PATH after the shell started (new scripts in ~/bin,
+  # fresh `brew install`) without having to run `rehash`.
+  zstyle ':completion:*' rehash true
   zstyle ':completion:*' menu no
   zstyle ':completion:*:*:*:*:*' menu no
   zstyle ':completion:*:descriptions' format '[%d]'

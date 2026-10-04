@@ -41,6 +41,7 @@ checks=(
   'tool completion generated'                '[[ -s $HOME/.zfunc/_faketool ]]'
   'compinit ran (completion registered)'     '[[ ${_comps[faketool]} == _faketool ]]'
   'fzf-tab styles set after Zephyr styles'   '[[ $(zstyle -L ":completion:*:*:*:*:*" menu) == *"menu no"* ]]'
+  'new executables in PATH are completed'    '[[ $(zstyle -L ":completion:*" rehash) == *"rehash true"* ]]'
   'transient prompt hooked into Enter'       '(( ${accept_line_hook[(Ie)transient-prompt]} ))'
 )
 
