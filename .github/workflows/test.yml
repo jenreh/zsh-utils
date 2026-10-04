@@ -1,0 +1,13 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Smoke test (loads the modules with the current Zephyr)
+        run: zsh tests/run.zsh
