@@ -9,7 +9,7 @@ these modules only add what Zephyr doesn't have.
 ## Modules
 
 | Module | What it does | Load |
-|---|---|---|
+| --- | --- | --- |
 | `zephyr-config` | Settings for the Zephyr modules: history file `~/.zsh_history`, compinit right away (needed by fzf-tab), starship as prompt | before Zephyr |
 | `overrides` | Zephyr defaults changed back: `>` may overwrite files again (`clobber`) | after Zephyr's `directory` |
 | `completion` | `~/.zfunc` on `fpath`; completions printed by tools (default: `ngrok completion`) written there and refreshed after updates; fzf-tab styles | before Zephyr's `completion` |
