@@ -35,6 +35,7 @@ EOF
 
 checks=(
   'clobber is on (overrides)'                '[[ -o clobber ]]'
+  'history keeps duplicates (overrides)'      '[[ ! -o hist_ignore_all_dups && ! -o hist_save_no_dups ]]'
   'history file is ~/.zsh_history'           '[[ $HISTFILE == $HOME/.zsh_history ]]'
   '~/.zfunc is on fpath'                     '(( ${fpath[(Ie)$HOME/.zfunc]} ))'
   'tool completion generated'                '[[ -s $HOME/.zfunc/_faketool ]]'
